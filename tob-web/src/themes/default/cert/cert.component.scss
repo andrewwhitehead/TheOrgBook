@@ -61,3 +61,142 @@ code {
 }
 
 @import "../../_active/cert/cert.component.custom";
+
+
+
+// v2
+
+
+%fa-base {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cred-link {
+  &::before {
+    @extend %fa-base;
+    content: "\f0a3";
+    padding-right: 0.3em;
+  }
+  &.location::before {
+    content: "\f041";
+  }
+  &.name::before {
+    content: "\f02b";
+  }
+  &.contact::before {
+    content: "\f1d8";
+  }
+  &.email::before {
+    content: "\f0e0";
+  }
+  &.phone::before {
+    content: "\f095";
+  }
+  &.url::before {
+    content: "\f14e";
+  }
+  &.person::before {
+    content: "\f2c2";
+  }
+}
+
+.claim-info {
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  &::before {
+    @extend %fa-base;
+    padding-right: 0.3em;
+  }
+  &.contact::before {
+    content: "\f1d8";
+  }
+  &.location::before {
+    content: "\f041";
+  }
+  &.name::before {
+    content: "\f02b";
+  }
+  &.email::before {
+    content: "\f0e0";
+  }
+  &.phone::before {
+    content: "\f095";
+  }
+  &.url::before {
+    content: "\f14e";
+  }
+  &.person::before {
+    content: "\f2c2";
+  }
+  &.date::before {
+    content: "\f073";
+  }
+}
+div.claim-info {
+  padding-left: 1.3em;
+  position: relative;
+  &::before {
+    margin-left: -1.2em;
+  }
+}
+
+.issuer-link {
+  &::before {
+    @extend %fa-base;
+    content: "\f19c";
+    padding-right: 0.3em;
+  }
+}
+
+.claim-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  > li {
+    display: flex;
+    align-items: flex-start;
+    > label {
+      flex: 0 0 10em;
+      font-weight: normal;
+    }
+    > span {
+      flex: auto;
+    }
+  }
+}
+
+.cred-info {
+  font-size: 1.5rem;
+}
+
+.meta-panel {
+  border: 2px solid #8ac;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column nowrap;
+  max-height: 40em;
+  overflow: hidden;
+  > .panel-heading {
+    display: flex;
+    flex: none;
+    padding: 1rem 1.2rem 0.8rem;
+    .panel-title {
+      flex: auto;
+      font-size: 2rem;
+    }
+    .util-link {
+      font-size: 1.3rem;
+    }
+  }
+  > .panel-body {
+    flex: auto;
+    font-size: 15px;
+    overflow: auto;
+    word-wrap: break-word;
+  }
+}

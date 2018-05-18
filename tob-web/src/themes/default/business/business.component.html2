@@ -1,0 +1,335 @@
+<section id="business">
+  <div class="row" *ngIf="error">
+    <div class="col-sm-12">
+      {{error}}
+    </div>
+  </div>
+
+  <div class="row" *ngIf="!loaded && !error">
+    <div class="col-sm-12 page-load">
+      <div class="loading-indicator"></div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="loaded">
+    <div class="col-md-8 col-sm-7">
+      <h1 class="name-title">246801234 British Columbia Inc.</h1>
+
+      <a [routerLink]="'/' | localize" class="title-back-link mrgn-bttm-md"><span class="fa fa-arrow-left"></span> {{'search.return-link' | translate}}</a>
+
+      <div class="row">
+        <div class="col-sm-12 name-info">
+          <div class="panel name-panel">
+            <div class="panel-heading">
+              <h3 class="panel-title">Incorporation: <span class="fa fa-tag"></span> <strong>246801234 British Columbia Inc.</strong></h3>
+            </div>
+            <div class="panel-body">
+              <div class="row form-group">
+                <div class="col-sm-7">
+                  <label class="control-label">Issuer</label>
+                  <div class="form-field">
+                    <a href="#" class="issuer-link">BC Registries</a>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <label class="control-label">Effective Date</label>
+                  <div class="form-field">
+                    <span class="contact-info date">2018-04-01</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-sm-7">
+                  <label class="control-label">Contact</label>
+                  <div class="form-field">
+                    <ul class="contact-list">
+                      <li>
+                        <label>Business Phone</label>
+                        <span class="contact-info phone">+1-800-411-4111</span>
+                      </li>
+                      <li>
+                        <label>Skype Address</label>
+                        <span class="contact-info">iverson.example</span>
+                      </li>
+                      <li>
+                        <label>Email Address</label>
+                        <span class="contact-info email">sales@iverson.example.ca</span>
+                      </li>
+                      <li>
+                        <label>Website Address</label>
+                        <span class="contact-info url">https://iverson.example.ca</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <label class="control-label">Registered Office</label>
+                  <div class="contact-info location">
+                    123 Fake St<br>
+                    Campbell River<br>
+                    British Columbia, Canada<br>
+                    V4H 1B1
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-7">
+                  <label class="control-label">People</label>
+                  <div class="form-field">
+                    <ul class="contact-list">
+                      <li>
+                        <label>Director</label>
+                        <span class="contact-info person">Bob Terwilliger</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer text-right">
+              <span class="fa fa-certificate"></span> <a class="util-link" href="#">View credential</a>
+              &nbsp;
+              <span class="fa fa-history"></span> <a href="#" class="util-link">See history (1)</a>
+            </div>
+          </div>
+
+          <div class="panel name-panel">
+            <div class="panel-heading">
+              <h3 class="panel-title">Doing Business As: <span class="fa fa-tag"></span> <strong>Iverson Kitchen</strong></h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-7">
+                  <label class="control-label">Issuer</label>
+                  <div class="form-field">
+                    <a href="#" class="issuer-link">BC Registries</a>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <label class="control-label">Effective Date</label>
+                  <div class="form-field">
+                    <span class="contact-info date">2018-05-01</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer text-right">
+              <span class="fa fa-certificate"></span> <a class="util-link" href="#">View credential</a>
+              &nbsp;
+              <span class="fa fa-history"></span> <a href="#" class="util-link">See history (1)</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-4 col-sm-5">
+      <div class="panel timeline-panel">
+        <div class="panel-heading">
+          <h3 class="panel-title">Timeline</h3>
+          <a class="util-link" href="#"><span class="fa fa-expand"></span> Expand</a>
+        </div>
+        <div class="panel-body">
+          <ul class="timeline-list">
+            <li>
+              <a href="#" class="issuer-link">Fraser Valley Health Authority</a> issued <a href="#" class="cert-link">Health Inspection</a>
+              <time>10 days ago</time>
+            </li>
+            <li>
+              Added <em>Director</em> <a href="#" class="cert-link person">Bob Terwilliger</a>
+              <time>3 months ago</time>
+            </li>
+            <li>
+              Added <em>Business Phone</em> contact <a href="#" class="cert-link phone">+1-800-411-4111</a>
+              <time>3 months ago</time>
+            </li>
+            <li>
+              Added <em>Skype Address</em> contact <a href="#" class="cert-link contact">iverson.example</a>
+              <time>3 months ago</time>
+            </li>
+            <li>
+              Added <em>Email Address</em> contact <a href="#" class="cert-link email">sales@iverson.example.ca</a>
+              <time>3 months ago</time>
+            </li>
+            <li>
+              Added <em>Website Address</em> contact <a href="#" class="cert-link url">https://iverson.example.ca</a>
+              <time>3 months ago</time>
+            </li>
+            <li>
+              Added <em>Registered Office</em> location <a href="#" class="cert-link location">123 Fake St, Campbell River BC, Canada V4H 1B1</a>
+              <time>3 months ago</time>
+            </li>
+            <li>
+              <a href="#" class="issuer-link">BC Registries</a> issued <em>Doing Business As</em> <a href="#" class="cert-link name">Iverson Kitchen</a>
+              <time>3 months ago</time>
+            </li>
+            <li>
+              <a href="#" class="issuer-link">BC Registries</a> issued <em>Incorporation</em> <a href="#" class="cert-link name">246801234 British Columbia Inc.</a>
+              <time>4 months ago</time>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="row creds-outer">
+    <div class="col-sm-12">
+      <h3>Credentials</h3>
+
+      <div class="panel cred-panel">
+        <div class="panel-heading">
+          <h4 class="panel-title"><span class="fa fa-certificate"></span> <strong>Health Inspection</strong></h4>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-7">
+              <label class="control-label">Issuer</label>
+              <div class="form-field">
+                <a href="#" class="issuer-link">Fraser Valley Health Authority</a>
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <label class="control-label">Effective Date</label>
+              <div class="form-field">
+                <span class="contact-info date">2018-07-20</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer text-right">
+          <span class="fa fa-certificate"></span> <a class="util-link" href="#">View credential</a>
+          &nbsp;
+          <span class="fa fa-history"></span> <a href="#" class="util-link">See history (1)</a>
+        </div>
+      </div>
+
+      <div class="panel cred-panel">
+        <div class="panel-heading">
+          <h4 class="panel-title"><span class="fa fa-certificate"></span> <strong>Women-Owned Supplier</strong></h4>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-7">
+              <label class="control-label">Issuer</label>
+              <div class="form-field">
+                <a href="#" class="issuer-link">Public Services and Procurement Canada (PSPC)</a>
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <label class="control-label">Effective Date</label>
+              <div class="form-field">
+                <span class="contact-info date">2018-07-20</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer text-right">
+          <span class="fa fa-certificate"></span> <a class="util-link" href="#">View credential</a>
+          &nbsp;
+          <span class="fa fa-history"></span> <a href="#" class="util-link">See history (1)</a>
+        </div>
+      </div>
+
+      <div class="panel cred-panel">
+        <div class="panel-heading">
+          <h4 class="panel-title"><span class="fa fa-certificate"></span> <strong>Security Screening</strong></h4>
+        </div>
+        <div class="panel-body">
+          <div class="row form-group">
+            <div class="col-sm-7">
+              <label class="control-label">Issuer</label>
+              <div class="form-field">
+                <a href="#" class="issuer-link">Public Services and Procurement Canada (PSPC)</a>
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <label class="control-label">Effective Date</label>
+              <div class="form-field">
+                <span class="contact-info date">2018-07-20</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-7">
+              <div class="form-field">
+                <ul class="contact-list">
+                  <li>
+                    <label>Screening Level</label>
+                    <span class="contact-info">Personnel Assigned (PA)</span>
+                  </li>
+                  <li>
+                    <label>Screening Expiry</label>
+                    <span class="contact-info date">2018-12-31</span>
+                  </li>
+                  <li>
+                    <label>Facility Clearance</label>
+                    &mdash;
+                  </li>
+                  <li>
+                    <label>Facility Clearance Expiry</label>
+                    &mdash;
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer text-right">
+          <span class="fa fa-certificate"></span> <a class="util-link" href="#">View credential</a>
+          &nbsp;
+          <span class="fa fa-history"></span> <a href="#" class="util-link">See history (1)</a>
+        </div>
+      </div>
+
+      <div class="panel cred-panel">
+        <div class="panel-heading">
+          <h4 class="panel-title"><span class="fa fa-certificate"></span> <strong>Vendor Performance Rating</strong></h4>
+        </div>
+        <div class="panel-body">
+          <div class="row form-group">
+            <div class="col-sm-7">
+              <label class="control-label">Issuer</label>
+              <div class="form-field">
+                <a href="#" class="issuer-link">Public Services and Procurement Canada (PSPC)</a>
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <label class="control-label">Effective Date</label>
+              <div class="form-field">
+                <span class="contact-info date">2018-07-20</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-7">
+              <div class="form-field">
+                <ul class="contact-list">
+                  <li>
+                    <label>Performance Score</label>
+                    <span class="contact-info">5</span>
+                  </li>
+                  <li>
+                    <label>Last Updated</label>
+                    <span class="contact-info date">2018-06-20</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer text-right">
+          <span class="fa fa-certificate"></span> <a class="util-link" href="#">View credential</a>
+          &nbsp;
+          <span class="fa fa-history"></span> <a href="#" class="util-link">See history (1)</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
