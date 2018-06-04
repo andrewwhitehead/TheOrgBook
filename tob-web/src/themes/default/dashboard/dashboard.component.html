@@ -17,21 +17,25 @@
           <li class="stat"><span class="numbers">{{recordCounts.orgs | number}}</span> {{'dashboard.title-orgs' | translate}}</li>
           <li class="stat"><span class="numbers">{{recordCounts.certs | number}}</span> {{'dashboard.title-certs' | translate}}</li>
         </ul>
-        <div class="search-outer">
-          <div [class]="'large-search' + (searchFocused ? ' active' : '')">
-            <span class="load" *ngIf="loading"><div class="loading-indicator"></div></span>
-            <input type="text" id="searchInput" name="query" size="40" [placeholder]="'search.placeholder'|translate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" (input)="inputEvent($event)" (focus)="inputEvent($event)" (blur)="inputEvent($event)">
-            <button class="btn btn-primary"><span class="fa fa-search"></span></button>
-          </div>
+        <div class="search-title">
+          <h2>Find an organization</h2>
           <div class="search-types">
             <a href="#" class="search-type active">Names</a>
             <a href="#" class="search-type">Locations</a>
+          </div>
+        </div>
+        <div class="search-outer">
+          <div [class]="'large-search' + (searchFocused ? ' active' : '')">
+            <span class="load" *ngIf="loading"><div class="loading-indicator"></div></span>
+            <input type="text" id="searchInput" name="query" size="40" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" (input)="inputEvent($event)" (focus)="inputEvent($event)" (blur)="inputEvent($event)">
+            <button class="btn btn-primary"><span class="fa fa-search"></span></button>
           </div>
         </div>
       </div>
 
       <div class="row results mrgn-tp-lg">
         <div class="col-sm-3 facets">
+          <label class="control-label">Refine search</label>
           <div class="facet">
             <label class="control-label">Status</label>
             <ul>

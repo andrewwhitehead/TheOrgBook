@@ -53,8 +53,17 @@ $input-border: rgba(128, 173, 210, 0.9);
   }
 }
 
+.search-title {
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  width: 600px;
+}
+
 .search-types {
+  flex: auto;
   padding: 16px;
+  text-align: right;
 }
 
 .search-type {
@@ -87,6 +96,7 @@ $input-border: rgba(128, 173, 210, 0.9);
 .results {
   //border-bottom: 1px solid #ddd;
   font-size: 1.6rem;
+  margin-top: 4rem;
   .row {
     border-top: 1px solid #ddd;
     font-size: 2rem;
@@ -107,6 +117,10 @@ $input-border: rgba(128, 173, 210, 0.9);
     display: block;
   }
   margin-bottom: 0.25em;
+}
+label + .facet {
+  border-top: 1px solid #ddd;
+  padding-top: 0.5em;
 }
 
 .results-nav {
