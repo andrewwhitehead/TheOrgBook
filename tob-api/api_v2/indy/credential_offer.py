@@ -17,7 +17,7 @@ class CredentialOfferManager(object):
 
     def generate_credential_request(self):
         """Generates a credential request
-        
+
         Returns:
             tuple -- credential_request, credential_request_metadata
         """
@@ -28,7 +28,7 @@ class CredentialOfferManager(object):
                     credential_request_metadata_json,
                 ) = await holder.create_cred_req(
                     json.dumps(self.credential_offer),
-                    json.dumps(self.credential_definition),
+                    self.credential_definition["id"],
                 )
             return credential_request, json.loads(
                 credential_request_metadata_json

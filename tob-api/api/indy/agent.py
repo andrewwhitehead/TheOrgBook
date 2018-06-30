@@ -1,12 +1,12 @@
 import os
 import threading
 
+from von_agent import Issuer as VonIssuer
+from von_agent import Verifier as VonVerifier
+from von_agent import HolderProver as VonHolderProver
 from von_agent.nodepool import NodePool
 from von_agent.wallet import Wallet
 from tob_api import hyperledger_indy
-from von_agent.agents import Issuer as VonIssuer
-from von_agent.agents import Verifier as VonVerifier
-from von_agent.agents import HolderProver as VonHolderProver
 from typing import Set, Union
 
 from api import apps
@@ -27,7 +27,7 @@ class Issuer:
             config['genesis_txn_path'])
         wallet_name = 'TheOrgBook_Issuer_Wallet'
 
-        issuer_type   = 'virtual'
+        issuer_type   = 'default'
         issuer_config = {'freshness_time':0}
         issuer_creds  = {'key':''}
 
@@ -75,7 +75,7 @@ class Verifier:
             config['genesis_txn_path'])
         wallet_name = 'TheOrgBook_Verifier_Wallet'
 
-        verifier_type   = 'virtual'
+        verifier_type   = 'default'
         verifier_config = {'freshness_time':0}
         verifier_creds  = {'key':''}
 
@@ -132,11 +132,10 @@ class Holder:
             holder_creds  = {'auth_token':apps.get_remote_wallet_token(),'virtual_wallet':legal_entity_id}
             self.__logger.debug('Using remote Cfg: {} Creds: {}'.format(holder_config, holder_creds))
         else:
-            # TODO force to virtual for now
-            holder_type = 'virtual'
+            holder_type = 'default'
             holder_config = {'freshness_time':0}
-            holder_creds  = {'key':'','virtual_wallet':legal_entity_id}
-            self.__logger.debug('Using virtual Cfg: {} Creds: {}'.format(holder_config, holder_creds))
+            holder_creds  = {'key':''}
+            self.__logger.debug('Using Cfg: {} Creds: {}'.format(holder_config, holder_creds))
 
         self.__logger.debug("Holder __init__>>> {} {} {}".format(holder_type, holder_config, holder_creds))
 
